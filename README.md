@@ -3,4 +3,4 @@
 #### Use TMDB API to get movies with description and rating. Text color changing according to rating score.
 
 
-#### Deployed using Netlify: TBA
+#### Deployed using Netlify: https://tg-movieapp.netlify.app/
