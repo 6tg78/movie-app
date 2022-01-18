@@ -15,7 +15,7 @@ async function getTitles(url) {
     const res = await fetch(url);
     const data = await res.json();
 
-    console.log(data.results);
+    showMovies(data.results);
 }
 
 function showMovies(movies) {
@@ -27,7 +27,6 @@ function showMovies(movies) {
         movieElem.classList.add('movie-container');
 
         movieElem.innerHTML = `            
-        <div class="movie-container">
             <img
             src="${IMG_PATH + poster_path}"
             alt="${title}"
@@ -41,11 +40,9 @@ function showMovies(movies) {
             <div class="description">
             <h3>Description</h3>
             ${overview}
-            </div>
-        </div>`;
+            </div>`;
 
         main.appendChild(movieElem);
-        console.log(movie);
     });
 }
 
